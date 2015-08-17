@@ -1,21 +1,23 @@
-# Haste
+# ZeroHaste
 
-Haste is an open-source pastebin software written in node.js, which is easily
-installable in any network.  It can be backed by either redis or filesystem,
-and has a very easy adapter interface for other stores.  A publicly available
-version can be found at [hastebin.com](http://hastebin.com)
+ZeroHaste is an open-source pastebin software written in node.js, where the server
+has zero knowledge of pasted data. Data is encrypted/decrypted in the browser using
+256 bits AES. It is easily installable in any network.  It can be backed by either
+redis, memcached, postgres, or filesystem, and has a very easy adapter interface for
+other stores. A publicly available version can be found at [hastebin.com](http://hastebin.com)
 
 Major design objectives:
 
 * Be really pretty
 * Be really simple
 * Be easy to set up and use
+* Be really secure
 
-Haste works really well with a little utility called
+ZeroHaste works really well with a little utility called
 [haste-client](https://github.com/seejohnrun/haste-client), allowing you
 to do things like:
 
-`cat something | haste`
+`cat something | zerohaste`
 
 which will output a URL to share containing the contents of `cat something`'s
 STDOUT.  Check the README there for more details and usages.
