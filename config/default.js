@@ -1,38 +1,36 @@
-{
+module.exports = {
+  host: process.env.HOST || '0.0.0.0',
+  port: process.env.PORT || 7777,
 
-  "host": "0.0.0.0",
-  "port": 7777,
+  keyLength: 10,
 
-  "keyLength": 10,
+  maxLength: 400000,
 
-  "maxLength": 400000,
+  staticMaxAge: 86400,
 
-  "staticMaxAge": 86400,
+  recompressStaticAssets: true,
 
-  "recompressStaticAssets": true,
-
-  "logging": [
+  logging: [
     {
-      "level": "verbose",
-      "type": "Console",
-      "colorize": true
+      level: "verbose",
+      type: "Console",
+      colorize: true
     }
   ],
 
-  "keyGenerator": {
-    "type": "phonetic"
+  keyGenerator: {
+    type: "phonetic"
   },
 
-  "storage": {
-    "type": "redis",
-    "host": "0.0.0.0",
-    "port": 6379,
-    "db": 2,
-    "expire": 2592000
+  storage: {
+    type: "redis",
+    host: process.env.REDIS_HOST || '0.0.0.0',
+    port: process.env.REDIS_PORT || 6379,
+    db: process.env.REDIS_DB || 2,
+    expire: process.env.REDIS_EXPIRE || 2592000
   },
 
-  "documents": {
-    "about": "./about.md"
+  documents: {
+    about: "./about.md"
   }
-
-}
+};
