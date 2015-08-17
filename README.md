@@ -163,6 +163,40 @@ forward on GETs.
 
 All of which are optional except `type` with very logical default values.
 
+## Highlighting
+
+ZeroHaste will syntax highlight the following formats:
+
+```
+Apache
+Bash
+C#
+C++
+CSS
+CoffeeScript
+Diff
+HTML, XML
+HTTP
+Ini
+JSON
+Java
+JavaScript
+Makefile
+Markdown
+Nginx
+Objective C
+PHP
+Perl
+Python
+Ruby
+SQL
+Dockerfile
+Go
+Less
+SCSS
+Twig
+```
+
 ## Author
 
 John Crepezzi <john.crepezzi@gmail.com>
