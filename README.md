@@ -35,6 +35,12 @@ STDOUT.  Check the README there for more details and usages.
 3.  `npm install`
 4.  `npm start`
 
+### Docker
+
+1. Install [Docker](https://docs.docker.com/installation)
+2. Install [Docker Compose](https://docs.docker.com/compose/install)
+3. `docker-compose up`
+
 ## Settings
 
 * `host` - the host the server runs on (default localhost)

@@ -1,0 +1,10 @@
+web:
+  build: .
+  ports:
+   - "7777:7777"
+  volumes:
+   - .:/opt/app
+  links:
+   - redis
+redis:
+  image: redis
