@@ -114,6 +114,33 @@ or post.
 
 All of which are optional except `type` with very logical default values.
 
+### Postgres
+
+To use postgres storage you must install the `pg` package in npm
+
+`npm install pg`
+
+Once you've done that, your config section should look like:
+
+``` json
+{
+  "type": "postgres",
+  "connectionUrl": "postgres://user:password@host:5432/database"
+}
+```
+
+You can also just set the environment variable for `DATABASE_URL` to your database connection url.
+
+You will have to manually add a table to your postgres database:
+
+`create table entries (id serial primary key, key varchar(255) not null, value text not null, expiration int, unique(key));`
+
+You can also set an `expire` option to the number of seconds to expire keys in.
+This is off by default, but will constantly kick back expirations on each view
+or post.
+
+All of which are optional except `type` with very logical default values.
+
 ### Memcached
 
 To use memcached storage you must install the `memcache` package via npm
