@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 RUN apt-get update
-RUN apt-get -y install nodejs
+RUN apt-get install -y --no-install-recommends nodejs npm
 
 WORKDIR /opt/app
 ADD . /opt/app
@@ -12,6 +12,5 @@ RUN npm install --production
 
 EXPOSE 7777
 
-ENTRYPOINT ["node"]
-
-CMD ["server.js"]
+CMD []
+ENTRYPOINT ["/usr/bin/nodejs", "server.js"]
